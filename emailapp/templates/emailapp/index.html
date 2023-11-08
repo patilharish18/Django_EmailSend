@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>start</h1>
+    <form action="{% url 'savetodb' %}" method="POST">
+        <label for="subject">subject :</label>
+        <input type="text" placeholder="Enter subject" name="subject">
+        <br><br>
+
+        <label for="message"> Message :</label>
+        <input type="text" placeholder="Enter message" name="message">
+        <br><br>
+
+        <label for="your email">your Email :</label>
+        <input type="email" placeholder="Enter email" name="youremail">
+        <br><br>
+
+        <label for="customer email">Customer Email :</label>
+        <input type="email" placeholder="Enter email" name="customeremail">
+        <br><br>
+
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+        
+
+    </form>
+</body>
+</html>
